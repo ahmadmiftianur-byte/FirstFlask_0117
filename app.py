@@ -15,4 +15,8 @@ def index():
         else:
             hasil = "Nama tidak boleh kosong. Silakan isi terlebih dahulu."
 
-    
+    return render_template("index.html", hasil=hasil, nama=nama_terakhir)
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
