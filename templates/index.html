@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask POST Demo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main class="container">
+    <h1>Input Data via POST</h1>
+
+    <form method="POST" action="{{ url_for('index') }}">
+      <label for="nama">Nama Lengkap</label>
+      <input
+        type="text"
+        id="nama"
+        name="nama"
+        value="{{ nama }}"
+        placeholder="Masukkan nama..."
+      >
+      <button type="submit">Kirim Data</button>
+    </form>
+
+    {% if hasil %}
+      <section class="output-box">
+        <label>Output Server</label>
+        <p>{{ hasil }}</p>
+      </section>
+    {% endif %}
+  </main>
+</body>
+</html>
