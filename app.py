@@ -5,4 +5,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+    hasil = None
+    nama_terakhir = ""
+
     
